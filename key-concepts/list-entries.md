@@ -10,7 +10,7 @@
 | versionStatus | query | string | | The status of the entry, either *published* or *latest*. The default is *published* |
 | linkDepth | query | number | int | The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
 | pageIndex | query | number | int | The index of the result set to return |
-| pageSize | query | number | int | The number of items to return in the result set |
+| pageSize | query | number | int | The number of items to return in the result set. The default is 25 |
 | order | query | string | | A comma-separated list of [field](/model/content-type.md#field) ids to order the results by. Descending order is specified using a prefixed '-' |
 | fields | query | string | | A comma-separated list of [field](/model/content-type.md#field) ids to restrict the fields returned for an entry |
 | lang | query | string | [Language code](/localization.md) | The language variation to return for each entry |
