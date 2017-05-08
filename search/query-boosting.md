@@ -378,7 +378,7 @@ Query structure can also be used to provide more relevance to specific fields. F
   ]
 }
 ```
-This yields the following results:
+This yields the following results:  
 ![Structured field query](/images/field-search-title-structured-weighted.png)
 
 However, this does not produce the same results as those of the weighted example.
