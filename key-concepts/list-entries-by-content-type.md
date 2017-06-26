@@ -14,7 +14,7 @@
 | pageSize | query | number | int | The number of items to return in the result set. The default is 25 |
 | order | query | string | | A comma-separated list of [field](/model/content-type.md#field) ids to order the results by. Descending order is specified using a prefixed '-' |
 | fields | query | string | | A comma-separated list of [field](/model/content-type.md#field) ids to restrict the fields returned for an entry |
-| lang | query | string | [Language code](/localization.md) | The language variation to return for each entry |
+| language | query | string | [Language code](/localization.md) | The language variation to return for each entry |
 
 ## Response messages
 
@@ -34,13 +34,13 @@ GET: /api/delivery/projects/movieDb/contentTypes/movies/entries/
 ### List of all movie entries translated to German
 
 ```http
-GET: /api/delivery/projects/movieDb/contentTypes/movies/entries?lang=de
+GET: /api/delivery/projects/movieDb/contentTypes/movies/entries?language=de
 ```
 
 ### List of all movie entries translated to German and ordered by release date descending
 
 ```http
-GET: /api/delivery/projects/movieDb/contentTypes/movies/entries?lang=de&order=-releaseDate
+GET: /api/delivery/projects/movieDb/contentTypes/movies/entries?language=de&order=-releaseDate
 ```
 
 ### List of all movie entries with their direct child entries, assets and images resolved
