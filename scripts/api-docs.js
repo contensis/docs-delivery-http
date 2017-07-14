@@ -1,6 +1,6 @@
 (function(){
     var urlRoot = "/contensis/api/delivery/http/"
-    var version = 'beta'
+    var version = '9.1'
 
     var versions = [];
     var select;
