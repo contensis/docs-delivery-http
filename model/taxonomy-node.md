@@ -23,11 +23,21 @@ This example shows a taxonomy node object with child taxonomy nodes:
     "path": "Root",
     "hasChildren": true,
     "children": [
-        "key": "0/1",
-        "name": "Movies",
-        "path": "Root/Movies",
-        "hasChildren": false,
-        "children": []
+        {
+            "key": "0/1",
+            "name": "Movies",
+            "path": "Root/Movies",
+            "hasChildren": true,
+            "children": [
+                {
+                    "key": "0/1/2",
+                    "name": "Genres",
+                    "path": "Root/Movies/Genres",
+                    "hasChildren": false,
+                    "children": []
+                }
+            ]
+        }        
     ]
 }
 ```
