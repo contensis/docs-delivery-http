@@ -13,6 +13,7 @@
 * [GET a single entry](/key-concepts/get-entry.md)
 * [GET list of all entries](/key-concepts/list-entries.md)
 * [GET list of entries by content type](/key-concepts/list-entries-by-content-type.md)
+* [GET taxonomy nodes](/key-concepts/get-taxonomy-nodes.md)
 
 ## Security
 * [Access token](/security/access-token.md)
@@ -26,6 +27,7 @@
 * [Entry](/model/entry.md)
 * [Version](/model/version.md)
 * [Paged list](/model/paged-list.md)
+* [Taxonomy node](/model/taxonomy-node.md)
 ---
 * [Asset](/model/asset.md)
 * [Image](/model/image.md)
