@@ -25,7 +25,7 @@ GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=0/1/2/3?language=en-GB&c
 
 | HTTP status code | Reason | Response model |
 |:-|:-|:-|
-| 200 | Success | A [Taxonomy Node](/model/taxonomy.md) |
+| 200 | Success | A [Taxonomy Node](/model/taxonomy-node.md) |
 | 500 | Internal server error | [Error](/key-concepts/errors.md) |
 | 404 | Project not found | [Error](/key-concepts/errors.md) |
 | 404 | Project does not support the specified language | [Error](/key-concepts/errors.md) |
