@@ -42,7 +42,7 @@ GET: /api/delivery/projects/movieDb/taxonomy/nodes/0/1/2
 | Name | Parameter Type | Type | Format | Description |
 | :------- | :-------|  :--- | :----- | :------------ |
 | projectId | path | string | | The project identifier |
-| key | path | string |  | The taxonomy path |
+| key | path | string |  | The taxonomy key |
 | language | query | string | [Language code](/localization.md) | [Optional] The language of the taxonomy name to retrieve. Defaults to the project default |
 | childDepth | query | number | int | [Optional] The maximum depth to which child nodes should be returned |
 | order | query |  string | | [Optional] How to order the child nodes. Defaults to the creation order, otherwise specify "alphabetical" |
