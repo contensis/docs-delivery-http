@@ -18,7 +18,7 @@ GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=root/movies/genres
 
 ## Example request
 ```http
-GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=root/movies/genres/thriller?language=en-GB&childDepth=2&order=alphabetical
+GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=root/movies/genres/thriller&language=en-GB&childDepth=2&order=alphabetical
 ```
 
 ## Response messages
