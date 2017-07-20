@@ -4,7 +4,7 @@
 ## Get taxonomy nodes by path
 
 ```http
-GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=0/1/2
+GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=root/movies/genres
 ```
  
 ## Parameters
@@ -18,7 +18,7 @@ GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=0/1/2
 
 ## Example request
 ```http
-GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=0/1/2/3?language=en-GB&childDepth=2&order=alphabetical
+GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=root/movies/genres/thriller?language=en-GB&childDepth=2&order=alphabetical
 ```
 
 ## Response messages
@@ -35,7 +35,7 @@ GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=0/1/2/3?language=en-GB&c
 ## Get taxonomy nodes by key
 
 ```http
-GET: /api/delivery/projects/movieDb/taxonomy/nodes/Root/Movies/Genres/Thriller
+GET: /api/delivery/projects/movieDb/taxonomy/nodes/0/1/2
 ```
 
 ## Parameters
@@ -50,7 +50,7 @@ GET: /api/delivery/projects/movieDb/taxonomy/nodes/Root/Movies/Genres/Thriller
 
 ## Example request
 ```http
-GET: /api/delivery/projects/movieDb/taxonomy/nodes/Root/Movies/Genres/Thriller?language=en-GB&childDepth=2&order=alphabetical
+GET: /api/delivery/projects/movieDb/taxonomy/nodes/0/1/2?language=en-GB&childDepth=2&order=alphabetical
 ```
 
 ## Response messages
