@@ -14,7 +14,7 @@ A query tree structure, along with order and paging specifiers, allows a search 
 This example demonstrates a simple search.
 
 ```http
-POST: /api/search
+POST: /api/delivery/projects/{projectId}/entries/search
 
 {
     "where": [
