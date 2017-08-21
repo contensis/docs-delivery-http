@@ -57,6 +57,7 @@ For example, if searching across movie ‘title’, ‘tagline’ and ‘overvie
 ```
 
 As can be seen from the following results, this lends a higher relevance to titles with a higher ratio of the term ‘earth’:  
+
 ![Weighting 'title' query](/images/field-search-title-weighted.png)
 
 However, what can also be seen is the fact that ‘title’ fields with higher ratios of the term do not guarantee higher relevance. This is due to the cumulative effect of scoring across terms and operators, meaning the total relevance of the result can also be affected by the relevance of the other fields which have been searched across.
@@ -103,6 +104,7 @@ Applying the same weighting to the ‘tagline’ field:
 ```
 
 Yields the following results:  
+
 ![Weighting 'tagline' query](/images/field-search-tagline-weighted.png)
 
 Finally, weighting the ‘overview’ field:
@@ -145,6 +147,7 @@ Finally, weighting the ‘overview’ field:
 }
 ```
 Results in:  
+
 ![Weighting 'overview' query](/images/field-search-overview-weighted.png)
 
 As can be seen, weighting can help in providing relevance to your results, but is not a guarantee of specific ordering.
@@ -378,6 +381,7 @@ Query structure can also be used to provide more relevance to specific fields. F
 }
 ```
 This yields the following results:  
+
 ![Structured field query](/images/field-search-title-structured-weighted.png)
 
 However, this does not produce the same results as those of the weighted example.
