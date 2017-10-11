@@ -15,7 +15,6 @@ Contensis supports the following basic data types:
 | stringArray | An array of strings |
 | integerArray | An array of integers |
 | decimalArray | An array of decimals |
-| booleanArray | An array of booleans |
 | dateTimeArray | An array of dateTimes |
 | objectArray | An array of objects |
 
@@ -43,9 +42,6 @@ Contensis supports the following basic data types:
     ],
     "decimalArray": [
         1.2, 3.4, 5.6
-    ],
-    "booleanArray": [
-        true, false, true
     ],
     "dateTimeArray": [
         "2017-03-07T14:37:27.0998174+00:00",
