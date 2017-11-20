@@ -13,7 +13,7 @@ All assets have the following standard data fields.
 | title | string | | The title of the asset |
 | description | string | | The description for the asset |
 | keywords | string [...] || An array of keyword assigned to the asset |
-| thumbnail | object | Entry | The thumbnail link for the asset |
+| thumbnail | object | Asset | The thumbnail link for the asset |
 | includeInSearch | boolean || A flag to determine whether the asset should be included in searches |
 | includeInAtoZ | boolean || A flag to determine whether the asset should be included in the A-Z control |
 | includeInMenu | boolean || A flag to determine whether the asset should be included in navigation controls |
@@ -85,7 +85,7 @@ All metadata values are converted to strings and datetime values are rendered wi
         "metadata": {
             "originalId": "12345",
             "originalUrl": "http://www.myothersite.com/image/deadpool.jpg",
-            "importDate": "
+            "importDate": "2017/07/12 13:45:22"
         },
         "properties": {
             "filename": "deadpool.jpg",
