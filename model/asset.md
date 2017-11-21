@@ -14,11 +14,6 @@ All assets have the following standard data fields.
 | description | string | | The description for the asset |
 | keywords | string [...] || An array of keyword assigned to the asset |
 | thumbnail | object | Asset | The thumbnail link for the asset |
-| includeInSearch | boolean || A flag to determine whether the asset should be included in searches |
-| includeInAtoZ | boolean || A flag to determine whether the asset should be included in the A-Z control |
-| includeInMenu | boolean || A flag to determine whether the asset should be included in navigation controls |
-| includeInSitemap | boolean || A flag to determine whether the asset should be included in the sitemap |
-| nodeId | number | integer | The node id of the asset (Contensis Web API) |
 
 ### Image
 
@@ -53,9 +48,23 @@ Extended properties are specific to a content type.
 
 ## Metadata
 
-Metadata defined against assets in the Contensis navigation tree are available as values in the Metadata field, which is a child of the **sys** object. The items are keyed by their source metadata name converted to an api identifer, which removes any non-alphanumeric values and formats the value with camel-casing, e.g. Original.Url becomes originalUrl.
+### User-defined
 
-All metadata values are converted to strings and datetime values are rendered with the day, month and year parts in reverse order to allow ordering, e.g. `"29-08-1978T03:40:27"` becomes `"1978-08-29T03:40:27"`
+User-defined metadata set against assets in the Contensis navigation tree are available as values in the Metadata field, which is a child of the **sys** object. The items are keyed by their source metadata name converted to an api identifer, which removes any non-alphanumeric values and formats the value with camel-casing, e.g. Original.Url becomes originalUrl.
+
+All user-defined metadata values are converted to strings with datetime values being rendered with the day, month and year parts in reverse order to allow ordering and greater than / less than conditions, e.g. `"29-08-1978T03:40:27"` becomes `"1978-08-29T03:40:27"`
+
+### Default
+
+In addition to the user-defined metadata, there are the following additional items that are included by default for each asset.
+
+| Name | Type | Format | Description |
+| ---- | ---- | ------ | ----------- |
+| includeInSearch | boolean || A flag to determine whether the asset should be included in searches |
+| includeInAtoZ | boolean || A flag to determine whether the asset should be included in the A-Z control |
+| includeInMenu | boolean || A flag to determine whether the asset should be included in navigation controls |
+| includeInSitemap | boolean || A flag to determine whether the asset should be included in the sitemap |
+| nodeId | number | integer | The node id of the asset (Contensis Web API) |
 
 ## Example JSON
 
@@ -70,11 +79,6 @@ All metadata values are converted to strings and datetime values are rendered wi
         "dataFormat": "asset",
         "language": "en-GB"
     },
-    "includeInSearch": true,
-    "includeInAtoZ": false,
-    "includeInMenu": true,
-    "includeInSitemap": true,
-    "nodeId": "45353",
     "sys": {
         "id": "71f73a9b-2a13-4d63-bcc1-e8ee5047b01c",
         "contentTypeId": "image",
@@ -83,6 +87,11 @@ All metadata values are converted to strings and datetime values are rendered wi
         "uri": "/site-elements/images/covers/deadpool.jpg",
         "dataFormat": "asset",
         "metadata": {
+            "includeInSearch": true,
+            "includeInAtoZ": false,
+            "includeInMenu": true,
+            "includeInSitemap": true,
+            "nodeId": 45353,
             "originalId": "12345",
             "originalUrl": "http://www.myothersite.com/image/deadpool.jpg",
             "importDate": "2017/07/12 13:45:22"
