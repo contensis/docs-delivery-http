@@ -33,7 +33,7 @@ All assets have the following default readonly properties.
 | ---- | ---- | ------ | ----------- |
 | filename | string | | The name of the actual file, with extension included |
 | fileSize | number | integer | The file size in bytes |
-| fileId | string | Guid | The file identifier |
+| fileId | string | GUID | The file identifier |
 
 ### Extended
 
