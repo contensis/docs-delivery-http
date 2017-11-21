@@ -52,7 +52,7 @@ Extended properties are specific to a content type.
 
 User-defined metadata set against assets in the Contensis navigation tree are available as values in the Metadata field, which is a child of the **sys** object. The items are keyed by their source metadata name converted to an api identifer, which removes any non-alphanumeric values and formats the value with camel-casing, e.g. Original.Url becomes originalUrl.
 
-All user-defined metadata values are converted to strings with datetime values being rendered with the day, month and year parts in reverse order to allow ordering and greater than / less than conditions, e.g. `"29-08-1978T03:40:27"` becomes `"1978-08-29T03:40:27"`
+All user-defined metadata values are converted to strings Datetime values are rendered with the day, month and year parts in reverse order to allow ordering and greater than / less than conditions, e.g. `"29-08-1978T03:40:27"` becomes `"1978-08-29T03:40:27"`
 
 ### Default
 
