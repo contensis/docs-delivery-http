@@ -3,14 +3,17 @@
 A paged list is a structure that is used to describe paging details for listing and search results.
 
 ## Properties
+
 | Name | Type | Format | Description |
 | :------- | :--- | :----- | :---------- |
 | pageIndex | number | int | The index of the result set to return |
 | pageSize | number | int | The size of the result set to return |
 | totalCount | number | int | The total number of results available |
+| pageCount | number | int | The calculated page count based on the totalCount and pageSize |
 | items | object [...] |  | A container for the items being returned |
 
 ## Example
+
 The paged list properties provide the information required to implement paging.
 
 ```json
@@ -18,6 +21,7 @@ The paged list properties provide the information required to implement paging.
   "pageIndex": 0,
   "pageSize": 20,
   "totalCount": 342,
+  "pageCount": 18,
   "items": [
     {
       "title": "The Terminator",
