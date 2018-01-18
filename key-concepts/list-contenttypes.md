@@ -1,3 +1,6 @@
+---
+description: Returns an array of content type resources for a project.
+---
 # Get content types for a project
 
 Returns an array of content type resources for a project.
