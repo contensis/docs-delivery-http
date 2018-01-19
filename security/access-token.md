@@ -1,3 +1,6 @@
+---
+description: Access to resources in the Delivery API requires that an accessToken value is provided with each request to the services.
+---
 # Access token
 
 Access to resources in the Delivery API requires that an *accessToken* value is provided with each request to the services. The *accessToken* can be set as either a HTTP header value or as a querystring parameter.
