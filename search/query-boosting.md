@@ -1,3 +1,6 @@
+---
+description: Search queries can be focused by weighting free-text queries and structuring queries so as to provide convergence on certain fields and/or terms.
+---
 # Query Weighting
 
 Search queries can be focused by weighting free-text queries and structuring queries so as to provide convergence on certain fields and/or terms.
