@@ -1,3 +1,6 @@
+---
+description: HTTP Delivery API summary.
+---
 ## HTTP Delivery API
 * [Introduction](/README.md)
 
