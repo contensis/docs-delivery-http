@@ -120,6 +120,42 @@ The *entryTitle* field is a dynamic value, determined by the *EntryTitleField* v
 
 Fields defined in the content type for the entry can be accessed by their API id.
 
+### All fields
+
+All fields can be searched by specifying an asterisk (*) in the field id. Note there are some limitations, and the FreeText operator is not supported for all fields.
+
+#### Example
+```http
+POST: /api/delivery/projects/{projectId}/entries/search
+{
+    "where": [
+        {
+            "field": "*",
+            "equalTo": "Interstellar"
+        }        
+    ]
+}
+```
+
+### Array fields
+
+Searching on array fields require square brackets [] to be specified in the field id before any field ids within the object. Note that this syntax is not required for single object fields. All operators support searching across array fields.
+
+#### Example array field search
+This example searches for a quote source of "Bruce Willis" within a quote array field called movieQuote.
+
+```http
+POST: /api/delivery/projects/{projectId}/entries/search
+{
+    "where": [
+        {
+            "field": "movieQuote[].source",
+            "equalTo": "Bruce Willis"
+        }        
+    ]
+}
+```
+
 ## Complete example
 
 The following example combines the ordering, paging and weighting concepts.
