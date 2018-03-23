@@ -17,7 +17,7 @@ A query tree structure, along with order and paging specifiers, allows a search 
 
 This example demonstrates a simple search.
 
-```http
+```json
 POST: /api/delivery/projects/{projectId}/entries/search
 
 {
@@ -125,7 +125,7 @@ Fields defined in the content type for the entry can be accessed by their API id
 All fields can be searched by specifying an asterisk (*) in the field id. Note there are some limitations, and the FreeText operator is not supported for all fields.
 
 #### Example
-```http
+```json
 POST: /api/delivery/projects/{projectId}/entries/search
 {
     "where": [
@@ -144,7 +144,7 @@ Searching on array fields require square brackets [] to be specified in the fiel
 #### Example array field search
 This example searches for a quote source of "Bruce Willis" within a quote array field called movieQuote.
 
-```http
+```json
 POST: /api/delivery/projects/{projectId}/entries/search
 {
     "where": [
@@ -160,7 +160,7 @@ POST: /api/delivery/projects/{projectId}/entries/search
 
 The following example combines the ordering, paging and weighting concepts.
 
-```http
+```json
 POST: /api/delivery/projects/{projectId}/entries/search
 {
     "where": [
