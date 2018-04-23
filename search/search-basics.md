@@ -188,3 +188,66 @@ POST: /api/delivery/projects/{projectId}/entries/search
     "pageSize": 50
 }
 ```
+## Specifying fields to return
+
+The fields returned in the results can be specified using a "fields" clause:
+
+```json
+{
+    "fields": [
+        "title",
+        "synopsis",
+        "actors",
+        "name",
+        "dateOfBirth",
+        "bio"
+    ]
+}
+```
+If no fields are specified then all the data fields and system fields for an entry will be returned.
+
+### Data fields
+Fields defined in the content type for the entry can be specified by their API id.
+
+### System fields
+If *sys* is included in the list of fields, then all system fields will be returned for the entry.
+
+If *sys* is not included in the list of fields, then the following system fields wil be returned:
+- id
+- dataFormat
+- language
+
+Additional system fields can be specified to be returned by being prefixed with *sys.*, e.g.
+
+```json
+{
+    "fields": [
+        "sys.uri",
+        "sys.contentTypeId"
+    ]
+}
+```
+The optional system fields that can be specified are:
+
+- uri
+- baseUris
+- projectId
+- contentTypeId
+- metadata
+- properties
+- version
+- owner
+
+It is not possible to specify individual fields within the *properties* and *metadata* fields.
+
+The *entryTitle* field  is included then this field will be returned, for example:
+
+```json
+{
+    "fields": [
+        "sys.uri",
+        "sys.contentTypeId",
+        "entryTitle"
+    ]
+}
+```

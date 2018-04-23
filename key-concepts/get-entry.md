@@ -10,6 +10,7 @@
 | entryId | path | string | GUID | The entry identifier as a 128 bit GUID |
 | language | query | string | | The specified language variation for the entry. If no value is provided then the projects primary language is used |
 | linkDepth | query | number | int | The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
+| fields | query | string | | A comma-separated [list](/key-concepts/fields-list.md) of [field](/model/content-type.md#field) ids to restrict the fields returned for an entry |
 
 ## Example request
 
