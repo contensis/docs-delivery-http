@@ -9,15 +9,18 @@ GET: /api/delivery/projects/movieDb/entries/99aae243-ad6e-401b-89f9-90a51def6a18
 If no fields are specified then all the data fields and system fields for an entry will be returned.
 
 ## Data fields
+
 Fields defined in the content type for the entry can be specified by their API id.
 
 ## System fields
+
 If *sys* is included in the list of fields, then all system fields will be returned for the entry.
 
 If *sys* is not included in the list of fields, then the following system fields wil be returned:
-- id
-- dataFormat
-- language
+
+* id
+* dataFormat
+* language
 
 Additional system fields can be specified to be returned by being prefixed with *sys.*, e.g.
 
@@ -27,14 +30,14 @@ GET: /api/delivery/projects/movieDb/entries/99aae243-ad6e-401b-89f9-90a51def6a18
 
 The optional system fields that can be specified are:
 
-- uri
-- baseUris
-- projectId
-- contentTypeId
-- metadata
-- properties
-- version
-- owner
+* uri
+* baseUris
+* projectId
+* contentTypeId
+* metadata
+* properties
+* version
+* owner
 
 It is not possible to specify individual fields within the *properties* and *metadata* fields.
 

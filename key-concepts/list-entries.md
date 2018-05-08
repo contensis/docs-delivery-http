@@ -6,7 +6,7 @@
 
 | Name | Parameter type | Type | Format | Description |
 |:-|:-|:-|:-|:-|
-| projectId | path | string | | The project identifier |
+| projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | versionStatus | query | string | | The status of the entry, either *published* or *latest*. The default is *published* |
 | linkDepth | query | number | int | The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
 | pageIndex | query | number | int | The index of the result set to return |
