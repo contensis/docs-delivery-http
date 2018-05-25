@@ -1,3 +1,6 @@
+---
+description: Status codes and error responses you can encounter when using the API.
+---
 # Errors
 
 Status codes and error responses you can encounter when using the API.
@@ -5,6 +8,7 @@ Status codes and error responses you can encounter when using the API.
 The Delivery API returns error detail in a generic format so that it can be easily handled in a consistent way. Detailed error information is not exposed in the response to ensure security sensitive details are not leaked.
 
 ## Typical HTTP status codes
+
 Below are the current status codes returned from the Delivery API.
 
 | Status code | Error code | Description |
@@ -16,6 +20,7 @@ Below are the current status codes returned from the Delivery API.
 
 
 ## Error response
+
 Each response follows the same rules.
 
 | Name | Type | Format | Description |

@@ -1,3 +1,6 @@
+---
+description: HTTP Delivery API summary.
+---
 ## HTTP Delivery API
 * [Introduction](/README.md)
 
@@ -7,6 +10,7 @@
 * [Data formats](/key-concepts/data-formats.md)
 * [Localization](/localization.md)
 * [Linked content](/key-concepts/linked-content.md)
+* [Fields list](/key-concepts/fields-list.md)
 ---
 * [GET a single project](/key-concepts/get-project.md)
 * [GET a single content type](/key-concepts/get-contenttype.md)

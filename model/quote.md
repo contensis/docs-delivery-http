@@ -1,3 +1,7 @@
+---
+description: The quote object represents a section of referenced text from an external source.
+---
+
 # Quote
 The quote object represents a section of referenced text from an external source.
 

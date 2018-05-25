@@ -6,7 +6,7 @@
 
 | Name | Parameter type | Type | Format | Description |
 |:-|:-|:-|:-|:-|
-| projectId | path | string | | The project identifier |
+| projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | contentTypeId | path | string | | The content type identifier |
 
 ## Example request

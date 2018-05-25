@@ -1,20 +1,23 @@
+---
+description: A query tree structure, along with order and paging specifiers, allows a search to be performed against indexed documents held in ElasticSearch. 
+---
 # Search
 
 A query tree structure, along with order and paging specifiers, allows a search to be performed against indexed documents held in ElasticSearch. The query API allows any required sub-query structure to be defined and a comprehensive selection of Operators enable individual field level evaluation.
 
-- [Queries](#queries)
-- [Sub-queries](#sub-queries)
-- [Ordering](#ordering)
-- [Paging](#paging)
-- [Weighting](#weighting)
-- [Specifying fields](#specifying-fields)
-- [Complete example](#complete-example)
+* [Queries](#queries)
+* [Sub-queries](#sub-queries)
+* [Ordering](#ordering)
+* [Paging](#paging)
+* [Weighting](#weighting)
+* [Specifying fields](#specifying-fields)
+* [Complete example](#complete-example)
 
 ## Queries
 
 This example demonstrates a simple search.
 
-```http
+```json
 POST: /api/delivery/projects/{projectId}/entries/search
 
 {
@@ -117,11 +120,49 @@ The *entryTitle* field is a dynamic value, determined by the *EntryTitleField* v
 
 Fields defined in the content type for the entry can be accessed by their API id.
 
+### All fields
+
+All fields can be searched by specifying an asterisk (*) in the field id. Note there are some limitations, and the FreeText operator is not supported for all fields.
+
+#### Example
+
+```json
+POST: /api/delivery/projects/{projectId}/entries/search
+{
+    "where": [
+        {
+            "field": "*",
+            "equalTo": "Interstellar"
+        }
+    ]
+}
+```
+
+### Array fields
+
+Searching on array fields require square brackets [] to be specified in the field id before any field ids within the object. Note that this syntax is not required for single object fields. All operators support searching across array fields.
+
+#### Example array field search
+
+This example searches for a quote source of "Bruce Willis" within a quote array field called movieQuote.
+
+```json
+POST: /api/delivery/projects/{projectId}/entries/search
+{
+    "where": [
+        {
+            "field": "movieQuote[].source",
+            "equalTo": "Bruce Willis"
+        }
+    ]
+}
+```
+
 ## Complete example
 
 The following example combines the ordering, paging and weighting concepts.
 
-```http
+```json
 POST: /api/delivery/projects/{projectId}/entries/search
 {
     "where": [
@@ -147,5 +188,74 @@ POST: /api/delivery/projects/{projectId}/entries/search
     ],
     "pageIndex": 1,
     "pageSize": 50
+}
+```
+
+## Specifying fields to return
+
+The fields returned in the results can be specified using a "fields" clause:
+
+```json
+{
+    "fields": [
+        "title",
+        "synopsis",
+        "actors",
+        "name",
+        "dateOfBirth",
+        "bio"
+    ]
+}
+```
+
+If no fields are specified then all the data fields and system fields for an entry will be returned.
+
+### Data fields
+
+Fields defined in the content type for the entry can be specified by their API id.
+
+### System fields
+
+If *sys* is included in the list of fields, then all system fields will be returned for the entry.
+
+If *sys* is not included in the list of fields, then the following system fields wil be returned:
+
+* id
+* dataFormat
+* language
+
+Additional system fields can be specified to be returned by being prefixed with *sys.*, e.g.
+
+```json
+{
+    "fields": [
+        "sys.uri",
+        "sys.contentTypeId"
+    ]
+}
+```
+
+The optional system fields that can be specified are:
+
+* uri
+* baseUris
+* projectId
+* contentTypeId
+* metadata
+* properties
+* version
+* owner
+
+It is not possible to specify individual fields within the *properties* and *metadata* fields.
+
+The *entryTitle* field  is included then this field will be returned, for example:
+
+```json
+{
+    "fields": [
+        "sys.uri",
+        "sys.contentTypeId",
+        "entryTitle"
+    ]
 }
 ```

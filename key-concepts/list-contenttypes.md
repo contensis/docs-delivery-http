@@ -1,3 +1,6 @@
+---
+description: Returns an array of content type resources for a project.
+---
 # Get content types for a project
 
 Returns an array of content type resources for a project.
@@ -8,7 +11,7 @@ Returns an array of content type resources for a project.
 
 |Name|Parameter type|Type|Format|Description|
 |:-|:-|:-|:-|:-|
-|projectId|path|string| |The project identifier|
+|projectId|path|string| |The project identifier, e.g. "movieDb". Found in the project overview screen of the management console|
 
 ## Example
 
