@@ -95,7 +95,7 @@ Order by *releaseDate* in a descending direction.
 
 Paging allows the number of results to be restricted to a defined count so that the results are easier to handle and ensures a response is returned quickly.
 
-The page number can also be specified to allow which set of results is to be returned.
+The page number can also be specified to allow which set of results is to be returned. The page size is limited to a maximum of 10,000 however this is not recommended.
 
 ```json
 {
@@ -106,7 +106,7 @@ The page number can also be specified to allow which set of results is to be ret
 
 ## Weighting
 
-@TODO: This needs fleshing out
+[comment]: <> (TODO: This needs fleshing out)
 
 ## Specifying fields
 
