@@ -48,3 +48,11 @@ The *entryTitle* field  is included then this field will be returned, for exampl
 ```http
 GET: /api/delivery/projects/movieDb/entries/99aae243-ad6e-401b-89f9-90a51def6a18/?fields=sys.uri,sys.contentTypeId,entryTitle
 ```
+
+### Entry description field
+
+The *entryDescription* field  is included then this field will be returned, for example:
+
+```http
+GET: /api/delivery/projects/movieDb/entries/99aae243-ad6e-401b-89f9-90a51def6a18/?fields=sys.uri,sys.contentTypeId,entryTitle,entryDescription
+```

@@ -114,7 +114,7 @@ The page number can also be specified to allow which set of results is to be ret
 
 System fields such as id, contentTypeId, projectId, versionNo etc. are under the *sys* object and can be accessed using a dot notation, e.g. sys.id, sys.contentTypeId, sys.projectId, sys.version.versionNo.
 
-The *entryTitle* field is a dynamic value, determined by the *EntryTitleField* value in the content type.
+The *entryTitle* and *entryDescription* fields are dynamic values, determined by the *EntryTitleField* and *EntryDescriptionField* values in the content type.
 
 ### Data fields
 
@@ -248,7 +248,7 @@ The optional system fields that can be specified are:
 
 It is not possible to specify individual fields within the *properties* and *metadata* fields.
 
-The *entryTitle* field  is included then this field will be returned, for example:
+If the *entryTitle* field is included then this field will be returned, for example:
 
 ```json
 {
@@ -258,4 +258,17 @@ The *entryTitle* field  is included then this field will be returned, for exampl
         "entryTitle"
     ]
 }
+
+If the *entryDescription* field is included then this field will be returned, for example:
+
+```json
+{
+    "fields": [
+        "sys.uri",
+        "sys.contentTypeId",
+        "entryTitle",
+        "entryDescription"
+    ]
+}
+
 ```
