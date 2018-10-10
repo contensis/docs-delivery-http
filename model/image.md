@@ -13,6 +13,7 @@ An image type is a container of an image asset with an associated caption.
 
 > **Note** The caption property allows instance specific text to be associated with a linked image asset.
 
+Transformations set against the image are appended a query string parameters to the sys.uri, so that when requested the transformations are applied using the image API.
 
 ## Example
 
@@ -28,7 +29,7 @@ An image type is a container of an image asset with an associated caption.
             "contentTypeId": "Image",
             "dataFormat": "asset",
             "language": "en-GB",
-            "uri": "/images/1999/drama/fight-club.jpeg",
+            "uri": "/images/1999/drama/fight-club.jpeg?w=1920&h=1080",
             "properties": {
                 "filename": "fight-club.jpeg",
                 "fileSize": 6033,
