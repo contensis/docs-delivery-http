@@ -16,7 +16,9 @@ An image type is a container of an image asset with an associated caption and al
 
 > **Note** The caption property allows instance specific text to be associated with a linked image asset.
 
-Transformations set against the image are appended a query string parameters to the sys.uri, so that when requested the transformations are applied using the image API.
+Transformations set against the image are appended as query string parameters to the sys.uri, so that when requested the transformations are applied using the image API.
+
+When the entry is requested without a linkDepth, the uri is not set however the transformations are still returned along with the image link.
 
 ## Example
 
@@ -51,6 +53,7 @@ Transformations set against the image are appended a query string parameters to 
         }
     },
     "caption": "Fight club is a great film!",
-    "altText": "The 1999 Fight Club movie poster."
+    "altText": "The 1999 Fight Club movie poster.",
+    "transformations": "w=1920&h=1080"
 }
 ```
