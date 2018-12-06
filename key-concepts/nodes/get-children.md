@@ -15,7 +15,7 @@ Gets the child nodes for a parent node
 
 ## Remarks
 
-
+If ordering has been specified against the child nodes then they will be returned in the defined order, otherise they will be returned ordered by the created date descending.
 
 ## Example request
 
