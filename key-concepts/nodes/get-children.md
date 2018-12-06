@@ -12,7 +12,10 @@ Gets the child nodes for a parent node
 | nodeId | path | string | GUID | The node identifier as a 128 bit GUID |
 | language | query | string | [Language code](/localization.md) | The specified language for the node. If no value is provided then the project primary language is used |
 | childDepth | query | number | integer | The depth at which to include decendants for the node, to a maximum depth of 10. The default is 0.  |
-| order | query | string | 'defined' or 'created' | The order in which to return the nodes. Specifying 'defined' will return nodes in the order explicitly assigned to the nodes (if set), whereas specifying 'created' will return the nodes based on their created date in a descending order. |
+
+## Remarks
+
+
 
 ## Example request
 
