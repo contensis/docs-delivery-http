@@ -21,11 +21,8 @@
 ### Navigation
 
 * [Get a node](/key-concepts/nodes/get-node.md)
-* [Get nodes by entry id](/key-concepts/nodes/get-nodes-by-entry-id.md)
 * [Get node children](/key-concepts/nodes/get-children.md)
 * [Get node parent](/key-concepts/nodes/get-parent.md)
-* [Get ancestor nodes](/key-concepts/nodes/get-ancestors.md)
-* [Get sibling nodes](/key-concepts/nodes/get-siblings.md)
 
 ## Security
 
