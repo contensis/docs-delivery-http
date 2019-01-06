@@ -16,7 +16,7 @@ A node represents a location within the navigational structure of a website. The
 | title | string | | The display name for the node |
 | entryId | GUID | | The identifier of the associated entry if assigned. |
 | language | [Language code](/localization.md) | | The language that the node represents |
-| url | string | URI path | The fullpath path of the node |
+| path | string | URI path | The path of the node |
 | hasChildren | boolean | | 'true' if the node has any descendants; 'false' otherwise. This can to be used to determine whether a call to request children is required |
 | children | node[] | | If a depth is specified when requesting a node then the children field would include the descendant nodes to the specified depth |
 
@@ -31,7 +31,7 @@ A node represents a location within the navigational structure of a website. The
     "title": "The Last Action Hero",
     "entryId": "48632961-F3A5-4821-AC94-2691DAF3858A",
     "language": "en-GB",
-    "url": "/en-GB/movies/action/last-action-hero",
+    "path": "/en-GB/movies/action/last-action-hero",
     "hasChildren": false,
     "children": []
 }

@@ -1,8 +1,8 @@
-# Get parent node
+# Get sibling nodes
 
-Gets the parent node for a child node
+Gets all nodes that are siblings under the current node's parent.
 
-<span class="label label--get">GET</span> /api/delivery/projects/**{projectId}**/nodes/**{nodeId}**/parent/
+<span class="label label--get">GET</span> /api/delivery/projects/**{projectId}**/nodes/**{nodeId}**/siblings
 
 ## Parameters
 
@@ -11,24 +11,20 @@ Gets the parent node for a child node
 | projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | nodeId | path | string | GUID | The node identifier as a 128 bit GUID |
 | language | query | string | [Language code](/localization.md) | The specified language for the node. If no value is provided then the project primary language is used |
-| childDepth | query | number | integer | The depth at which to include decendants for the node, to a maximum depth of 10. The default is 0  |
+| childDepth | query | number | integer | The depth at which to include decendants for the node, to a maximum depth of 10. The default is 0.  |
 | versionStatus | query | string | | The status of the associated entry, either *published* or *latest*. The default is *published* |
-
-## Remarks
-
-If the current node is the root node then a 404 response will be returned.
 
 ## Example request
 
 ```http
-GET: /api/delivery/projects/movieDb/nodes/bfeb8843-b7b5-4f60-bbb7-0d186fdfe22/parent/?language=de&childDepth=1&versionStatus=latest
+GET: /api/delivery/projects/movieDb/nodes/4058eaf7-de18-4857-ad2b-fdafe52d2f47?language=en-GB&childDepth=1&versionStatus=latest
 ```
 
 ## Response messages
 
 | HTTP status code | Reason | Response model |
 |:-|:-|:-|
-| 200 | Success | [Node](/model/node.md) |
+| 200 | Success | [Node[]](/model/node.md) |
 | 404 | Project not found | [Error](/key-concepts/errors.md) |
 | 404 | Node not found | [Error](/key-concepts/errors.md) |
 | 500 | Internal server error | [Error](/key-concepts/errors.md) |
