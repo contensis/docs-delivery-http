@@ -1,4 +1,4 @@
-# Get child nodes
+# Get nodes by entry id
 
 Gets all nodes that have the specified entry assigned.
 

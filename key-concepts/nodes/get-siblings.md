@@ -17,7 +17,7 @@ Gets all nodes that are siblings under the current node's parent.
 ## Example request
 
 ```http
-GET: /api/delivery/projects/movieDb/nodes/4058eaf7-de18-4857-ad2b-fdafe52d2f47?language=en-GB&childDepth=1&versionStatus=latest
+GET: /api/delivery/projects/movieDb/nodes/4058eaf7-de18-4857-ad2b-fdafe52d2f47/siblings?language=en-GB&childDepth=1&versionStatus=latest
 ```
 
 ## Response messages
