@@ -9,14 +9,14 @@ Gets the root node for a project.
 | Name | Parameter type | Type | Format | Description |
 |:-|:-|:-|:-|:-|
 | projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
-| language | query | string | | The specified language for the node. If no value is provided then the project primary language is used |
-| childDepth | query | number | integer | The depth at which to include decendants for the node, to a maximum depth of 10. The default is 0.  |
-| versionStatus | query | string | | The status of the associated entry, either *published* or *latest*. The default is *published* |
+| language | query | string | | [Optional] The specified language for the node. If no value is provided then the project primary language is used |
+| depth | query | number | integer | [Optional] The depth of decendants to include for the node, to a maximum overall depth of 9. The default is 0.  |
+| versionStatus | query | string | | [Optional] The status of the associated entry, either *published* or *latest*. The default is *published* |
 
 ## Example request
 
 ```http
-GET: /api/delivery/projects/movieDb/nodes/root/?language=de&childDepth=1&versionStatus=published
+GET: /api/delivery/projects/movieDb/nodes/root/?language=de&depth=1&versionStatus=published
 ```
 
 ## Response messages
@@ -42,14 +42,14 @@ Gets a single node by it's GUID.
 |:-|:-|:-|:-|:-|
 | projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | nodeId | path | string | GUID | The node identifier as a 128 bit GUID |
-| language | query | string | | The specified language for the node. If no value is provided then the project primary language is used |
-| childDepth | query | number | int | The depth at which to include decendants for the node, to a maximum depth of 10. The default is 0.  |
-| versionStatus | query | string | | The status of the associated entry, either *published* or *latest*. The default is *published* |
+| language | query | string | | [Optional] The specified language for the node. If no value is provided then the project primary language is used |
+| depth | query | number | int | [Optional] The depth of decendants to include for the node, to a maximum overall depth of 9. The default is 0.  |
+| versionStatus | query | string | | [Optional] The status of the associated entry, either *published* or *latest*. The default is *published* |
 
 ## Example request
 
 ```http
-GET: /api/delivery/projects/movieDb/nodes/4058eaf7-de18-4857-ad2b-fdafe52d2f47/?language=fr-FR&childDepth=2&versionStatus=latest
+GET: /api/delivery/projects/movieDb/nodes/4058eaf7-de18-4857-ad2b-fdafe52d2f47/?language=fr-FR&depth=2&versionStatus=latest
 ```
 
 ## Response messages
@@ -65,24 +65,23 @@ GET: /api/delivery/projects/movieDb/nodes/4058eaf7-de18-4857-ad2b-fdafe52d2f47/?
 
 # Get a node by path
 
-Gets a single node by it's path.
+Gets a single node by it's path. The root language is optional, if no language is specified then the project language is used.
 
-<span class="label label--get">GET</span> /api/delivery/projects/**{projectId}**/nodes/?path=**{nodePath}**
+<span class="label label--get">GET</span> /api/delivery/projects/**{projectId}**/nodes/**{nodePath}**
 
 ## Parameters
 
 | Name | Parameter type | Type | Format | Description |
 |:-|:-|:-|:-|:-|
 | projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
-| nodePath | query | string | | The path to the node, e.g. /en-GB/movies/action/fight-club |
-| language | query | string | | The specified language for the node. If no value is provided then the project primary language is used |
-| childDepth | query | number | integer | The depth at which to include decendants for the node, to a maximum depth of 10. The default is 0.  |
-| versionStatus | query | string | | The status of the associated entry, either *published* or *latest*. The default is *published* |
+| nodePath | path | string | | The path to the node, e.g. /en-GB/movies/action/fight-club |
+| depth | query | number | integer | [Optional] The depth of decendants to include for the node, to a maximum overall depth of 9. The default is 0.  |
+| versionStatus | query | string | |[Optional]  The status of the associated entry, either *published* or *latest*. The default is *published* |
 
 ## Example request
 
 ```http
-GET: /api/delivery/projects/movieDb/nodes/?path=/en-GB/movies/action/fight-club&language=fr-FR&childDepth=2&versionStatus=latest
+GET: /api/delivery/projects/movieDb/nodes/en-GB/movies/action/fight-club?depth=2&versionStatus=latest
 ```
 
 ## Response messages
