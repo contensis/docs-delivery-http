@@ -19,6 +19,7 @@ A node represents a location within the navigational structure of a website. The
 | path | string | URI path | The path of the node |
 | childCount | integer | | The count of child nodes |
 | children | node[] | | If a depth is specified when requesting a node then the children field would include the descendant nodes to the specified depth |
+| entry | [Entry](/model/entry.md) | | The entry associated with the node, if requested |
 
 ## Example
 
@@ -33,6 +34,11 @@ A node represents a location within the navigational structure of a website. The
     "language": "en-GB",
     "path": "/en-GB/movies/action/last-action-hero",
     "childCount": 10,
-    "children": []
+    "children": [],
+    "entry": {
+        "sys": {
+            "id": "e6976206-a488-45e3-a438-244b871f48c0"
+        }
+    }
 }
 ```

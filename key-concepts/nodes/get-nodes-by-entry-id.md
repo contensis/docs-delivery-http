@@ -12,6 +12,8 @@ Gets all nodes that have the specified entry assigned.
 | entryId | query | string | GUID | The entry identifier as a 128 bit GUID |
 | language | query | string | [Language code](/localization.md) | [Optional] The specified language for the node. If no value is provided then the project primary language is used |
 | versionStatus | query | string | | [Optional] The status of the associated entry, either *published* or *latest*. The default is *published* |
+| entryFields | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
+| entryLinkDepth | query | string | | [Optional] The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
 
 ## Example request
 
