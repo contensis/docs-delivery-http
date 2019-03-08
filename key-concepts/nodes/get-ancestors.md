@@ -13,6 +13,8 @@ Gets the ancestors nodes for node as a list, returned in depth ascending order.
 | language | query | string | [Language code](/localization.md) | [Optional] The specified language for the node. If no value is provided then the project primary language is used |
 | startLevel | query | number | integer | [Optional] The level of the top ancestor node to return. If no value is provided then the level will be 1 (root) |
 | versionStatus | query | string | | [Optional]  The status of the associated entry, either *published* or *latest*. The default is *published* |
+| entryFields | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
+| entryLinkDepth | query | string | | [Optional] The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
 
 ## Remarks
 
@@ -51,6 +53,8 @@ Gets the ancestor nodes for node at specified level. If no start level is specif
 | startLevel | query | number | integer | The level of the ancestor node to return |
 | depth | query | number | integer | [Optional]  The depth of decendants to include for the node, to a maximum overall depth of 9. The default is 0. |
 | versionStatus | query | string | | [Optional]  The status of the associated entry, either *published* or *latest*. The default is *published* |
+| entryFields | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
+| entryLinkDepth | query | string | | [Optional] The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
 
 ## Remarks
 
