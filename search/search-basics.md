@@ -6,6 +6,7 @@ description: A query tree structure, along with order and paging specifiers, all
 A query tree structure, along with order and paging specifiers, allows a search to be performed against indexed documents held in ElasticSearch. The query API allows any required sub-query structure to be defined and a comprehensive selection of Operators enable individual field level evaluation.
 
 * [Queries](#queries)
+* [Location searches](#location-searches)
 * [Sub-queries](#sub-queries)
 * [Ordering](#ordering)
 * [Paging](#paging)
@@ -32,6 +33,42 @@ POST: /api/delivery/projects/{projectId}/entries/search
             "greaterThan": 200
         }
     ]
+}
+```
+
+## Location searches
+
+Search for locations within a radius of a specified location.
+
+### Supported distance units
+
+| Unit          | Search value             |
+|---------------|--------------------------|
+| Mile          | `mi` or `miles`              |
+| Yard          | `yd`or `yards`              |
+| Feet          | `ft` or `feet`               |
+| Inch          | `in` or `inch`               |
+| Kilometer     | `km` or `kilometers`         |
+| Meter         | `m` or `meters`              |
+| Centimeter    | `cm` or `centimeters`      |
+| Millimeter    | `mm` or `millimeters`        |
+| Nautical mile | `NM`, `nmi` or `nauticalmiles` |
+
+### Example
+
+Find all entries which have a location within 10.5 miles of Ludlow Castle's location.
+Append the search value at the end of the distance specified, so for example "10.5mi" or "10.5miles".
+
+```json
+{
+    "where": [{
+        "field": "location",
+        "distanceWithin": {
+            "lat": "52.36700505",
+            "lon": "-2.72304296",
+            "distance": "10.5mi"
+        }
+    }]
 }
 ```
 
