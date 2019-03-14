@@ -42,16 +42,16 @@ Search for locations within a radius of a specified location.
 
 ### Supported distance units
 
-| Unit          | Search value             |
-|---------------|--------------------------|
-| Mile          | `mi` or `miles`              |
-| Yard          | `yd`or `yards`              |
-| Feet          | `ft` or `feet`               |
-| Inch          | `in` or `inch`               |
-| Kilometer     | `km` or `kilometers`         |
-| Meter         | `m` or `meters`              |
-| Centimeter    | `cm` or `centimeters`      |
-| Millimeter    | `mm` or `millimeters`        |
+| Unit          | Search value                   |
+|---------------|--------------------------------|
+| Mile          | `mi` or `miles`                |
+| Yard          | `yd` or `yards`                |
+| Feet          | `ft` or `feet`                 |
+| Inch          | `in` or `inch`                 |
+| Kilometer     | `km` or `kilometers`           |
+| Meter         | `m` or `meters`                |
+| Centimeter    | `cm` or `centimeters`          |
+| Millimeter    | `mm` or `millimeters`          |
 | Nautical mile | `NM`, `nmi` or `nauticalmiles` |
 
 ### Example
