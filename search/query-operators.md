@@ -15,7 +15,7 @@
 - [LessThan](#lessthan)
 - [LessThanOrEqualTo](#lessthanorequalto)
 - [StartsWith](#startswith)
-
+- [DistanceWithin](#distancewithin)
 
 ## Logical operators
 
@@ -251,6 +251,21 @@ In the example if the *name* field contains a value starting with *war* it would
     "where": [{
         "field": "name",
         "startsWith": "war"
+    }]
+}
+```
+### DistanceWithin
+In the example any locations within a 10 mile radius of the specified location would match.
+
+ ```json
+{
+    "where": [{
+        "field": "location",
+        "distanceWithin": {
+            "lat": "52.377",
+            "lon": "-2.749",
+            "distance": "10mi"
+        }
     }]
 }
 ```
