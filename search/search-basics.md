@@ -12,10 +12,11 @@ A query tree structure, along with order and paging specifiers, allows a search 
 * [Weighting](#weighting)
 * [Specifying fields](#specifying-fields)
 * [Complete example](#complete-example)
+* [HTTP GET queries](#http-get-queries)
 
 ## Queries
 
-This example demonstrates a simple search.
+This example demonstrates a simple search using HTTP POST.
 
 ```json
 POST: /api/delivery/projects/{projectId}/entries/search
@@ -33,6 +34,8 @@ POST: /api/delivery/projects/{projectId}/entries/search
     ]
 }
 ```
+
+Searches can also be carried out using [HTTP GET queries](#http-get-queries).
 
 ## Sub-queries
 
@@ -271,4 +274,20 @@ If the *entryDescription* field is included then this field will be returned, fo
     ]
 }
 
+```
+
+## HTTP GET queries
+
+Searches can also be carried out using an HTTP GET query, with the JSON for the individual sections of the query (*where*, *orderBy*, *pageSize*, *pageIndex*, *fields*) specified as querystring parameters.
+
+This example demonstrates a simple search using HTTP GET:
+
+```json
+GET: /api/delivery/projects/{projectId}/entries/search?where=[{"field":"title","contains":"Batman"},{"field":"runtime","greaterThan":200}]
+```
+
+This example demonstrates a more complex search using all the search options:
+
+```json
+GET: /api/delivery/projects/{projectId}/entries/search?where=[{"field":"title","contains":"Batman"},{"field":"runtime","greaterThan":200}]&orderBy=[{"asc":"title"}]&pageSize=10&pageIndex=0&fields=["entryTitle","entryDescription"]
 ```
