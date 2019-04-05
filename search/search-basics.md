@@ -36,6 +36,8 @@ POST: /api/delivery/projects/{projectId}/entries/search
 }
 ```
 
+Searches can also be carried out using [HTTP GET queries](#http-get-queries).
+
 ## Location searches
 
 Search for locations within a radius of a specified location.
