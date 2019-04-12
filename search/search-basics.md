@@ -74,8 +74,6 @@ Append the search value at the end of the distance specified, so for example "10
 }
 ```
 
-Searches can also be carried out using [HTTP GET queries](#http-get-queries).
-
 ## Sub-queries
 
 A sub-query is a query within another query that is used as a condition to further restrict the results. Effectively they are defined by an explicit nesting of [logical operators](query-operators.md#logical-operators).
