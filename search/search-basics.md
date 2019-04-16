@@ -74,6 +74,39 @@ Append the search value at the end of the distance specified, so for example "10
 }
 ```
 
+### Ordering by distance
+
+To return search results according to the distance of the location field in each entry from the distance specified in the distanceWithin search, add the location field to the [orderBy](#ordering) clause, e.g.
+
+```json
+{
+    "where": [{
+        "field": "location",
+        "distanceWithin": {
+            "lat": "52.36700505",
+            "lon": "-2.72304296",
+            "distance": "10.5mi"
+        }
+    }],
+    "orderBy": [{
+        "asc": "location"
+    }]
+}
+```
+
+The search results will include the distance from the location specified in the distanceWithin search to the location in the entry, in the same units that were specified in the search (but without the distance units). e.g.
+
+```json
+{
+	[location, {
+			"lat" : 51.209347,
+			"lon" : -2.6445979000000079,
+			"distance" : 83.292260807739808
+		}
+	]
+}
+```
+
 ## Sub-queries
 
 A sub-query is a query within another query that is used as a condition to further restrict the results. Effectively they are defined by an explicit nesting of [logical operators](query-operators.md#logical-operators).
