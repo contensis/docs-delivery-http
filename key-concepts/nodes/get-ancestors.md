@@ -39,9 +39,9 @@ GET: /api/delivery/projects/movieDb/nodes/d014533c-2f4e-4f73-b9f5-ff107755080b/a
 
 # Get ancestor at level
 
-Gets the ancestor nodes for node at specified level. If no start level is specified then the parent is returned.
+Gets the ancestor node for a node at a specified level. If no level is specified then the parent is returned.
 
-<span class="label label--get">GET</span> /api/delivery/projects/**{projectId}**/nodes/**{nodeId}**/ancestor?startLevel=**startLevel**
+<span class="label label--get">GET</span> /api/delivery/projects/**{projectId}**/nodes/**{nodeId}**/ancestor?level=**level**
 
 ## Parameters
 
@@ -50,7 +50,7 @@ Gets the ancestor nodes for node at specified level. If no start level is specif
 | projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | nodeId | path | string | GUID | The node identifier as a 128 bit GUID |
 | language | query | string | [Language code](/localization.md) | The specified language for the node. If no value is provided then the project primary language is used |
-| startLevel | query | number | integer | The level of the ancestor node to return |
+| level | query | number | integer | The level of the ancestor node to return |
 | depth | query | number | integer | [Optional]  The depth of decendants to include for the node, to a maximum overall depth of 9. The default is 0. |
 | versionStatus | query | string | | [Optional]  The status of the associated entry, either *published* or *latest*. The default is *published* |
 | entryFields | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
@@ -63,7 +63,7 @@ If the node is the root, then a 404 result will be returned.
 ## Example request
 
 ```http
-GET: /api/delivery/projects/movieDb/nodes/d014533c-2f4e-4f73-b9f5-ff107755080b/ancestors?startLevel=**2**&language=en-GB&depth=1&versionStatus=latest
+GET: /api/delivery/projects/movieDb/nodes/d014533c-2f4e-4f73-b9f5-ff107755080b/ancestors?level=**2**&language=en-GB&depth=1&versionStatus=latest
 ```
 
 ## Response messages
