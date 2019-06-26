@@ -21,7 +21,7 @@
 ### Navigation
 
 * [Get a node](/key-concepts/nodes/get-node.md)
-* [Get nodes or the canonical node by entry id](/key-concepts/nodes/get-nodes-by-entry-id.md)
+* [Get by attached entry id](/key-concepts/nodes/get-nodes-by-entry-id.md)
 * [Get node children](/key-concepts/nodes/get-children.md)
 * [Get node parent](/key-concepts/nodes/get-parent.md)
 * [Get ancestor nodes](/key-concepts/nodes/get-ancestors.md)
