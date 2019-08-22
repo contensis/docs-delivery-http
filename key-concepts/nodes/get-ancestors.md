@@ -63,7 +63,7 @@ If the node is the root, then a 404 result will be returned.
 ## Example request
 
 ```http
-GET: /api/delivery/projects/movieDb/nodes/d014533c-2f4e-4f73-b9f5-ff107755080b/ancestors?level=**2**&language=en-GB&depth=1&versionStatus=latest
+GET: /api/delivery/projects/movieDb/nodes/d014533c-2f4e-4f73-b9f5-ff107755080b/ancestor?level=**2**&language=en-GB&depth=1&versionStatus=latest
 ```
 
 ## Response messages
