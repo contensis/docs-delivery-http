@@ -16,12 +16,12 @@ GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=root/movies/genres
 | path | query | string |  | The taxonomy path |
 | language | query | string | [Language code](/localization.md) | [Optional] The language of the taxonomy name to retrieve. Defaults to the project default |
 | childDepth | query | number | integer | [Optional] The maximum depth to which child nodes should be returned |
-| order | query |  string | | [Optional] How to order the child nodes. Defaults to the creation order, otherwise specify "alphabetical" |
+| order | query |  string | | [Optional] How to order the child nodes. Defaults to alphabetical order, otherwise specify "defined" for the created order. |
 
 ## Example request
 
 ```http
-GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=root/movies/genres/thriller&language=en-GB&childDepth=2&order=alphabetical
+GET: /api/delivery/projects/movieDb/taxonomy/nodes?path=root/movies/genres/thriller&language=en-GB&childDepth=2&order=defined
 ```
 
 ## Response messages
@@ -49,13 +49,13 @@ GET: /api/delivery/projects/movieDb/taxonomy/nodes/0/1/2
 | key | path | string |  | The taxonomy key |
 | language | query | string | [Language code](/localization.md) | [Optional] The language of the taxonomy name to retrieve. Defaults to the project default |
 | childDepth | query | number | integer | [Optional] The maximum depth to which child nodes should be returned |
-| order | query |  string | | [Optional] How to order the child nodes. Defaults to the creation order, otherwise specify "alphabetical" |
+| order | query |  string | | [Optional] How to order the child nodes. Defaults to alphabetical order, otherwise specify "defined" for the created order. |
 
 
 ## Example request
 
 ```http
-GET: /api/delivery/projects/movieDb/taxonomy/nodes/0/1/2?language=en-GB&childDepth=2&order=alphabetical
+GET: /api/delivery/projects/movieDb/taxonomy/nodes/0/1/2?language=en-GB&childDepth=2&order=defined
 ```
 
 ## Response messages
