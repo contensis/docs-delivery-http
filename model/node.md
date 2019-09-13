@@ -15,6 +15,7 @@ A node represents a location within the navigational structure of a website. The
 | slug | string | Lower-cased with no special characters except hyphens | The slug of the node and unique to it's container, e.g. 'about-us' |
 | title | string | | The display name for the node |
 | entryId | GUID | | The identifier of the associated entry if assigned. |
+| isCanonical | bool | | Indicates if this is the canonical node or not |
 | language | [Language code](/localization.md) | | The language that the node represents |
 | path | string | URI path | The path of the node |
 | childCount | integer | | The count of child nodes |
@@ -31,6 +32,7 @@ A node represents a location within the navigational structure of a website. The
     "slug": "last-action-hero",
     "title": "The Last Action Hero",
     "entryId": "48632961-F3A5-4821-AC94-2691DAF3858A",
+    "isCanonical" : true,
     "language": "en-GB",
     "path": "/en-GB/movies/action/last-action-hero",
     "childCount": 10,
