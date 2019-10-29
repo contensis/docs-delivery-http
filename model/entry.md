@@ -75,6 +75,11 @@ This JSON example shows entry based on a movie content type.
         "uri": "/api/projects/movieDb/entries/71f73a9b-2a13-4d63-bcc1-e8ee5047b01c",
         "dataFormat": "entry",
         "metadata": {},
+        "uri" : "/movies/bttf",
+        "allUris" : [
+            "/movies/bttf"
+            "/mjfox/movies/bttf"
+            ],
         "version": {
             "createdBy": "s.derrickson",
             "created": "2016-10-12T09:29:18.5144641+01:00",
