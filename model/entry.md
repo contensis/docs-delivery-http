@@ -29,6 +29,7 @@ These are the standard properties that all entries have. The language property i
 | dataFormat | string | | Either *entry* or *asset* |
 | language | string | [Language code](/localization.md) | The language code of the entry variation |
 | uri | string | URI | The entry uri |
+| allUris | string[] | URI | All uris associated with the entry |
 | metadata | object | | Metadata associated with the entry instance |
 | version | object | [Version](/model/version.md) | Version info specific to the entry variation |
 
@@ -49,21 +50,27 @@ This JSON example shows entry based on a movie content type.
             "sys": {
                 "id": "a1c983d6-4aaf-4456-9f3d-a6eac3139f1c",
                 "language": "en-GB",
-                "dataFormat": "entry"
+                "dataFormat": "entry",
+                "contentTypeId": "actor",
+                "url": "actors/mjfox"
             }
         },
         {
             "sys": {
                 "id": "16f6f2de-e901-4bda-bf3f-092b93ae62a9",
                 "language": "en-GB",
-                "dataFormat": "entry"
+                "dataFormat": "entry",
+                "contentTypeId": "actor",
+                "url": "actors/clloyd"
             }
         },
         {
             "sys": {
                 "id": "09b87c0b-67b2-4028-9358-e29ff16f11da",
                 "language": "en-GB",
-                "dataFormat": "entry"
+                "dataFormat": "entry",
+                "contentTypeId": "actor",
+                "url": "actors/lthompson"
             }
         }
     ],
