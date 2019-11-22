@@ -52,7 +52,7 @@ This JSON example shows entry based on a movie content type.
                 "language": "en-GB",
                 "dataFormat": "entry",
                 "contentTypeId": "actor",
-                "url": "actors/mjfox"
+                "uri": "actors/mjfox"
             }
         },
         {
@@ -61,7 +61,7 @@ This JSON example shows entry based on a movie content type.
                 "language": "en-GB",
                 "dataFormat": "entry",
                 "contentTypeId": "actor",
-                "url": "actors/clloyd"
+                "uri": "actors/clloyd"
             }
         },
         {
@@ -70,7 +70,7 @@ This JSON example shows entry based on a movie content type.
                 "language": "en-GB",
                 "dataFormat": "entry",
                 "contentTypeId": "actor",
-                "url": "actors/lthompson"
+                "uri": "actors/lthompson"
             }
         }
     ],
