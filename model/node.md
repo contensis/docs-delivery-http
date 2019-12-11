@@ -7,21 +7,22 @@ A node represents a location within the navigational structure of a website. The
 
 ## Properties
 
-| Name        | Type                              | Format                                                | Description                                                                                                                      |
-|:------------|:----------------------------------|:------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------|
-| id          | string                            | GUID                                                  | The unique identifier for the node                                                                                               |
-| parentId    | string                            | GUID                                                  | The identifier of the parent node                                                                                                |
-| projectId   | string                            |                                                       | The project identifier, e.g. 'movieDb'. Found in the project overview screen of the management console                           |
-| slug        | string                            | Lower-cased with no special characters except hyphens | The slug of the node and unique to it's container, e.g. 'about-us'                                                               |
-| displayName | string                            |                                                       | The display name for the node                                                                                                    |
-| entryId     | GUID                              |                                                       | The identifier of the associated entry if assigned.                                                                              |
-| isCanonical | bool                              |                                                       | Indicates if this is the canonical node or not                                                                                   |
-| language    | [Language code](/localization.md) |                                                       | The language that the node represents                                                                                            |
-| path        | string                            | URI path                                              | The path of the node                                                                                                             |
-| childCount  | integer                           |                                                       | The count of child nodes                                                                                                         |
-| children    | node[]                            |                                                       | If a depth is specified when requesting a node then the children field would include the descendant nodes to the specified depth |
-| entry       | [Entry](/model/entry.md)          |                                                       | The entry associated with the node, if requested                                                                                 |
-| version     | versionInfo                       |                                                       | The node version information                                                                                                     |
+| Name          | Type                              | Format                                                | Description                                                                                                                         |
+|:--------------|:----------------------------------|:------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
+| id            | string                            | GUID                                                  | The unique identifier for the node                                                                                                  |
+| parentId      | string                            | GUID                                                  | The identifier of the parent node                                                                                                   |
+| projectId     | string                            |                                                       | The project identifier, e.g. 'movieDb'. Found in the project overview screen of the management console                              |
+| slug          | string                            | Lower-cased with no special characters except hyphens | The slug of the node and unique to it's container, e.g. 'about-us'                                                                  |
+| displayName   | string                            |                                                       | The display name for the node                                                                                                       |
+| entryId       | GUID                              |                                                       | The identifier of the associated entry if assigned.                                                                                 |
+| isCanonical   | bool                              |                                                       | Indicates if this is the canonical node or not                                                                                      |
+| language      | [Language code](/localization.md) |                                                       | The language that the node represents                                                                                               |
+| path          | string                            | URI path                                              | The path of the node                                                                                                                |
+| childCount    | integer                           |                                                       | The count of child nodes                                                                                                            |
+| children      | node[]                            |                                                       | If a depth is specified when requesting a node then the children field would include the descendant nodes to the specified depth    |
+| entry         | [Entry](/model/entry.md)          |                                                       | The entry associated with the node, if requested                                                                                    |
+| version       | versionInfo                       |                                                       | The node version information                                                                                                        |
+| includeInMenu | boolean                           |                                                       | 'true' if the node should be included in menus; Does not stop the node from being navigable. |
 
 
 ## Example
@@ -46,6 +47,7 @@ A node represents a location within the navigational structure of a website. The
     },
     "version": {
         "versionNo": "1.0"
-    }
+    },
+    "includeInMenu": true
 }
 ```
