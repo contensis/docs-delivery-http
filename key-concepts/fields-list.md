@@ -31,7 +31,6 @@ GET: /api/delivery/projects/movieDb/entries/99aae243-ad6e-401b-89f9-90a51def6a18
 The optional system fields that can be specified are:
 
 * uri
-* baseUris
 * projectId
 * contentTypeId
 * metadata
