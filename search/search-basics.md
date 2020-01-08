@@ -311,7 +311,6 @@ Additional system fields can be specified to be returned by being prefixed with 
 The optional system fields that can be specified are:
 
 * uri
-* baseUris
 * projectId
 * contentTypeId
 * metadata
