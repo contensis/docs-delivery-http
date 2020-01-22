@@ -148,7 +148,9 @@ This would find any item that has a field called *blends* with a value exactly m
 
 
 ### Exists
-In the example any document that has a field called *fieldName* would be returned. You can use a value of *false* if you want documents that do not contain a given field.
+In the example any document that has a field called *fieldName* and would be returned. Documents where *fieldName* has some content would also be returned.
+
+You can use a value of *false* if you want documents that do not contain a given field or where the field is empty or null.
 
 ```json
 {
