@@ -1,7 +1,7 @@
 ---
 description: Represents taxonomy nodes in the Delivery API that have been created in Contensis.
 ---
-# TaxonomyNode
+# Taxonomy
 
 Represents taxonomy nodes in the Delivery API that have been created in Contensis.
 

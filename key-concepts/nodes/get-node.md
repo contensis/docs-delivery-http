@@ -10,7 +10,7 @@ Gets the root node for a project.
 |:-|:-|:-|:-|:-|
 | projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | language | query | string | | [Optional] The specified language for the node. If no value is provided then the project primary language is used |
-| depth | query | number | integer | [Optional] The depth of decendants to include for the node, to a maximum overall depth of 9. The default is 0.  |
+| depth | query | number | integer | [Optional] The depth of decendants to include for the node. The default is *0*.  |
 | versionStatus | query | string | | [Optional] The status of the associated entry, either *published* or *latest*. The default is *published* |
 | entryFields | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
 | entryLinkDepth | query | string | | [Optional] The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
@@ -45,7 +45,7 @@ Gets a single node by it's GUID.
 | projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | nodeId | path | string | GUID | The node identifier as a 128 bit GUID |
 | language | query | string | | [Optional] The specified language for the node. If no value is provided then the project primary language is used |
-| depth | query | number | int | [Optional] The depth of decendants to include for the node, to a maximum overall depth of 9. The default is 0.  |
+| depth | query | number | int | [Optional] The depth of decendants to include for the node. The default is *0*.  |
 | versionStatus | query | string | | [Optional] The status of the associated entry, either *published* or *latest*. The default is *published* |
 | entryFields | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
 | entryLinkDepth | query | string | | [Optional] The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
@@ -79,7 +79,7 @@ Gets a single node by it's path. The root language is optional, if no language i
 |:-|:-|:-|:-|:-|
 | projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | nodePath | path | string | | The path to the node, e.g. /en-GB/movies/action/fight-club |
-| depth | query | number | integer | [Optional] The depth of decendants to include for the node, to a maximum overall depth of 9. The default is 0.  |
+| depth | query | number | integer | [Optional] The depth of decendants to include for the node. The default is *0*.  |
 | versionStatus | query | string | |[Optional]  The status of the associated entry, either *published* or *latest*. The default is *published* |
 | entryFields | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
 | entryLinkDepth | query | string | | [Optional] The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
