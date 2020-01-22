@@ -22,7 +22,7 @@ A node represents a location within the navigational structure of a website. The
 | children      | node[]                            |                                                       | If a depth is specified when requesting a node then the children field would include the descendant nodes to the specified depth    |
 | entry         | [Entry](/model/entry.md)          |                                                       | The entry associated with the node, if requested                                                                                    |
 | version       | versionInfo                       |                                                       | The node version information                                                                                                        |
-| includeInMenu | boolean                           |                                                       | 'true' if the node should be included in menus; Does not stop the node from being navigable. |
+| includeInMenu | boolean                           |                                                       | *true* if the node should be included in menus; Does not stop the node from being navigable. |
 
 
 ## Example
