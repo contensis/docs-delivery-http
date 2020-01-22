@@ -83,7 +83,7 @@ Gets a single node by it's path. The root language is optional, if no language i
 | versionStatus | query | string | |[Optional]  The status of the associated entry, either *published* or *latest*. The default is *published* |
 | entryFields | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
 | entryLinkDepth | query | string | | [Optional] The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
-| allowPartialMatch | query | boolean | | [Optional] When set to 'true', returns the nearest ancestor up to, but not including, root on the path if the node at the specified path does not exist |
+| allowPartialMatch | query | boolean | | [Optional] When set to *true*, returns the nearest ancestor up to, but not including, root on the path if the node at the specified path does not exist |
 
 ## Example request
 
