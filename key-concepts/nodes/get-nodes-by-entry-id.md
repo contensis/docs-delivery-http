@@ -1,6 +1,6 @@
 # Get nodes by entry id
 
-Gets all nodes that have the specified entry assigned or if CanonicalOnly=true returns the canonical node for the given entry.
+Gets all nodes that have the specified entry assigned, if canonicalOnly is set to true then only the canonical node for the given entry is returned.
 
 <span class="label label--get">GET</span> /api/delivery/projects/**{projectId}**/nodes/?entryId=**{entryId}**
 
@@ -11,11 +11,11 @@ Gets all nodes that have the specified entry assigned or if CanonicalOnly=true r
 | projectId         | path  | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | entryId           | query | string | GUID | The entry identifier as a 128 bit GUID |
 | language          | query | string | [Language code](/localization.md) | [Optional] The specified language for the node. If no value is provided then the project primary language is used |
-| depth | query | number | integer | [Optional] The depth of descendants to include for the node, to a maximum overall depth of 9. The default is 0. This parameter only has an effect if canonicalOnly has a value of `true` |
+| depth | query | number | integer | [Optional] The depth of descendants to include for the node. The default is *0*. This parameter only has an effect if canonicalOnly has a value of *true* |
 | versionStatus     | query | string | | [Optional] The status of the associated entry, either *published* or *latest*. The default is *published* |
 | entryFields       | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
 | entryLinkDepth    | query | int    | | [Optional] The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
-| canonicalOnly     | query | bool   | | [Optional] If canonicalOnly is `true` then just the canonical (default location) node is returned, otherwise a list of all nodes with the specified entry attached are returned |
+| canonicalOnly     | query | bool   | | [Optional] If canonicalOnly is *true* then just the canonical (default location) node is returned, otherwise a list of all nodes attached to the specified entry are returned |
 
 ## Example request
 

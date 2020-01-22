@@ -11,7 +11,7 @@ Gets the parent node for a child node
 | projectId | path | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
 | nodeId | path | string | GUID | The node identifier as a 128 bit GUID |
 | language | query | string | [Language code](/localization.md) | [Optional] The specified language for the node. If no value is provided then the project primary language is used |
-| depth | query | number | integer | [Optional] The depth at which to include decendants for the node, to a maximum depth of 10. The default is 0  |
+| depth | query | number | integer | [Optional] The depth at which to include decendants for the node. The default is *0*  |
 | versionStatus | query | string | | [Optional] The status of the associated entry, either *published* or *latest*. The default is *published* |
 | entryFields | query | string | | [Optional]  A comma separated list of entry fields to include in the entry response. Specify * to include all entry fields |
 | entryLinkDepth | query | string | | [Optional] The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |

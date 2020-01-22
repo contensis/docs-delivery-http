@@ -10,47 +10,50 @@
 * [Localization](/localization.md)
 * [Linked content](/key-concepts/linked-content.md)
 * [Fields list](/key-concepts/fields-list.md)
----
-* [Get a single project](/key-concepts/get-project.md)
-* [Get a single content type](/key-concepts/get-contenttype.md)
-* [Get a single entry](/key-concepts/get-entry.md)
-* [Get list of all entries](/key-concepts/list-entries.md)
-* [Get list of entries by content type](/key-concepts/list-entries-by-content-type.md)
-* [Get taxonomy nodes](/key-concepts/get-taxonomy-nodes.md)
-
-### Navigation
-
-* [Get a node](/key-concepts/nodes/get-node.md)
-* [Get by attached entry id](/key-concepts/nodes/get-nodes-by-entry-id.md)
-* [Get node children](/key-concepts/nodes/get-children.md)
-* [Get node parent](/key-concepts/nodes/get-parent.md)
-* [Get ancestor nodes](/key-concepts/nodes/get-ancestors.md)
-* [Get sibling nodes](/key-concepts/nodes/get-siblings.md)
 
 ## Security
 
 * [Access token](/security/access-token.md)
 
-<!--* [Authentication](/security/authentication.md)-->
-<!--* [Authorization](/security/authorization.md)-->
-<!--* [Scopes](/security/scopes.md)-->
+## Projects
 
-## Model
+* [Get a project](/key-concepts/get-project.md)
+
+## Content
+
+* [Get a content type](/key-concepts/get-contenttype.md)
+* [Get an entry](/key-concepts/get-entry.md)
+* [Get list of all entries](/key-concepts/list-entries.md)
+* [Get list of entries by content type](/key-concepts/list-entries-by-content-type.md)
+
+## Navigation
+
+* [Get a node](/key-concepts/nodes/get-node.md)
+* [Get nodes by entry id](/key-concepts/nodes/get-nodes-by-entry-id.md)
+* [Get child nodes](/key-concepts/nodes/get-children.md)
+* [Get parent node](/key-concepts/nodes/get-parent.md)
+* [Get ancestor nodes](/key-concepts/nodes/get-ancestors.md)
+* [Get sibling nodes](/key-concepts/nodes/get-siblings.md)
+
+## Taxonomy
+
+* [Get taxonomy nodes](/key-concepts/get-taxonomy-nodes.md)
+
+## Models
 
 * [Project](/model/project.md)
 * [Content type](/model/content-type.md)
 * [Entry](/model/entry.md)
-* [Version](/model/version.md)
-* [Paged list](/model/paged-list.md)
-* [Taxonomy node](/model/taxonomy-node.md)
----
 * [Asset](/model/asset.md)
 * [Image](/model/image.md)
+* [Node](/model/node.md)
+* [Taxonomy](/model/taxonomy-node.md)
+* [Version](/model/version.md)
+* [Paged list](/model/paged-list.md)
 * [Composed](/model/composed.md)
 * [Date range](/model/date-range.md)
 * [Location](/model/location.md)
 * [Quote](/model/quote.md)
-* [Node](/model/node.md)
 
 ## Search
 
