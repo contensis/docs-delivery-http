@@ -112,7 +112,7 @@ This would match on a field called *description* containing the phrase *batman*.
 {
     "where": [{
         "field": "description",
-        "contains": "espresso"
+        "contains": "batman"
     }]
 }
 ```
@@ -203,7 +203,7 @@ In the example any item that has a field called *first* and a value that is grea
 
 
 ### In
-In the example any document that where the field *first* is equal to *1*,*7* or *11* would be returned. The values should be of the same type, in this case *integer*.
+In the example any document where the field *first* is equal to *1*,*7* or *11* would be returned. The values should be of the same type, in this case *integer*.
 
 ```json
 {
