@@ -49,7 +49,7 @@ GET: /api/delivery/projects/movieDb/contentTypes/movies/entries?language=de&orde
 GET: /api/delivery/projects/movieDb/contentTypes/movies/entries?linkDepth=1
 ```
 
-**List the latest version of all movies**
+### List the latest version of all movies
 
 ```http
 GET: /api/delivery/projects/movieDb/contentTypes/movies/entries?versionStatus=latest

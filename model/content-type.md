@@ -19,7 +19,7 @@ A content type resource can be retrieved from the Delivery API to understand the
 | enabled | boolean |  |  |
 | defaultLanguage | string | [Language code](/localization.md) |  |
 | supportedLanguages | string [...] | [Language code](/localization.md) |  |
-| workflowId | string |  | The workflow that derived entries will  |
+| workflowId | string |  | The workflow that derived entries will use. Options are *contensisEntryBasic* or *contensisEntryApproval*. Default is *contensisEntryBasic* |
 | dataFormat | string |  | Either *entry* or *asset* |
 | previewUrl | string |  | The URL where an example of an entry based on the content type can be viewed |
 | version | object | [Version](/model/version.md) | Version information about the content type |
@@ -42,7 +42,7 @@ The field object is the definition of a field within an entry. The field also co
 | editor | object | Editor | Configuration for the Contensis entry editor |
 
 ## Localized value
-A localized value is a object that has values that are keyed by [language codes](/localization.md) which allows multilingual variations of a specific property.
+A localized value is an object that has values keyed by [language codes](/localization.md). This allows multilingual variations of a specific property.
 
 ## Example
 

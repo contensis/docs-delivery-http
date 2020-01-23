@@ -1,5 +1,5 @@
 ---
-description: A paged list is a structure that is used to describe paging details for listing and search results.
+description: A paged list is a structure that is used to describe paging details for listings and search results.
 ---
 # Paged list
 

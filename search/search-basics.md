@@ -183,7 +183,7 @@ POST: /api/delivery/projects/{projectId}/entries/search
 
 ### Array fields
 
-Searching on array fields require square brackets [] to be specified in the field id before any field ids within the object. Note that this syntax is not required for single object fields. All operators support searching across array fields.
+Searching on array fields requires square brackets [] to be specified in the field id before any field ids within the object. Note that this syntax is not required for single object fields. All operators support searching across array fields.
 
 #### Example array field search
 
