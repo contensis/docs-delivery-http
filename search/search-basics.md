@@ -165,7 +165,7 @@ Fields defined in the content type for the entry can be accessed by their API id
 
 ### All fields
 
-All fields can be searched by specifying an asterisk (*) in the field id. Note there are some limitations, and the FreeText operator is not supported for all fields.
+All fields can be searched by specifying an asterisk (*) in the field id. Note, the only supported operator is FreeText.
 
 #### Example
 
