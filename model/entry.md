@@ -28,9 +28,14 @@ These are the standard properties that all entries have. The language property i
 | contentTypeId | string | | The API identifier of the content type that the entry is based on |
 | dataFormat | string | | Either *entry* or *asset* |
 | language | string | [Language code](/localization.md) | The language code of the entry variation |
+| availableLanguages | string[] | [Language code](/localization.md) | A list languages which have available translations. |
 | uri | string | URI | The entry uri |
 | allUris | string[] | URI | All uris associated with the entry |
 | metadata | object | | Metadata associated with the entry instance |
+| workflow | object | | Workflow associated with the entry instance. |
+| workflow.id | string | | The API identifier of the workflow that the entry is using. |
+| workflow.state | string | | The API identifier of the current workflow state of the entry. |
+| isPublished | boolean | | If the entry is currently pubished then the value will be *true*. If the entry has yet to be published or has been unpublished it will be *false*. |
 | version | object | [Version](/model/version.md) | Version info specific to the entry variation |
 
 
