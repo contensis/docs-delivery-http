@@ -1,6 +1,6 @@
 # Get a single content type
 
-<span class="label label--get">GET</span> /api/delivery/**{projectId}**/contenttypes/**{contentTypeId}**
+<span class="label label--get">GET</span> /api/delivery/projects/**{projectId}**/contenttypes/**{contentTypeId}**
 
 ## Parameters
 
