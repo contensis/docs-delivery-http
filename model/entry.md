@@ -81,16 +81,25 @@ This JSON example shows an entry based on a movie content type.
     ],
     "sys": {
         "id": "71f73a9b-2a13-4d63-bcc1-e8ee5047b01c",
-        "contentTypeId": "movie",
         "projectId": "movieDb",
-        "language": "en-GB",
+        "contentTypeId": "movie",
         "dataFormat": "entry",
-        "metadata": {},
+        "language": "en-GB",
+        "availableLanguages": [
+            "en-GB",
+            "fr"
+        ],
         "uri" : "/movies/bttf",
         "allUris" : [
             "/movies/bttf"
             "/mjfox/movies/bttf"
-            ],
+        ],
+        "metadata": {},
+        "workflow": {
+            "id": "contensisEntryBasic",
+            "state": "versionComplete",
+        },
+        "isPublished": true,
         "version": {
             "createdBy": "s.derrickson",
             "created": "2016-10-12T09:29:18.5144641+01:00",
