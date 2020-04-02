@@ -147,10 +147,6 @@ The page number can also be specified to allow which set of results is to be ret
 }
 ```
 
-## Weighting
-
-[comment]: <> (TODO: This needs fleshing out)
-
 ## Specifying fields
 
 ### System fields
@@ -266,17 +262,23 @@ POST: /api/delivery/projects/{projectId}/entries/search
 
 ## Specifying fields to return
 
-The fields returned in the results can be specified using a "fields" clause:
+If you have large entries and only require a subset of fields it is worth limiting the fields returned in the results. This will reduce the size of the payload from the API which in turn will improve performance. The fields returned in the results can be specified using a "fields" clause. You can include fields by specifiying the field API ID or you can exclude fields by prefixing the field API ID with a -. Field limiting also applies to linked entries when specifying a linkDepth.
 
+Example of returning the title and synopsis
 ```json
 {
     "fields": [
         "title",
-        "synopsis",
-        "actors",
-        "name",
-        "dateOfBirth",
-        "bio"
+        "synopsis"
+    ]
+}
+```
+Example of returning all fields except for description and actors
+```json
+{
+    "fields": [
+        "-description",
+        "-actors"
     ]
 }
 ```
@@ -285,65 +287,55 @@ If no fields are specified then all the data fields and system fields for an ent
 
 ### Data fields
 
-Fields defined in the content type for the entry can be specified by their API id.
+Fields defined in the content type for the entry can be specified using their API ID.
 
 ### System fields
 
-If *sys* is included in the list of fields, then all system fields will be returned for the entry.
+By default all system fields will be returned for an entry.
 
-If *sys* is not included in the list of fields, then the following system fields wil be returned:
+If you specify *-sys*, then the following system fields wil still be returned as they are the minimum set:
 
-* id
-* dataFormat
-* language
+* sys.id
+* sys.dataFormat
+* sys.language
+* sys.contentTypeId
+* sys.uri
 
-Additional system fields can be specified to be returned by being prefixed with *sys.*, e.g.
+Specific system fields can be specified to be returned by being prefixed with *sys.*, e.g.
 
 ```json
 {
     "fields": [
         "sys.uri",
-        "sys.contentTypeId"
+        "sys.owner"
     ]
 }
 ```
 
 The optional system fields that can be specified are:
 
-* uri
-* projectId
-* contentTypeId
-* metadata
-* properties
-* version
-* owner
+* sys.projectId
+* sys.owner
+* sys.slug
+* sys.isPublished
+* sys.availableLanguages
+* sys.allUris
+* sys.workflow
+* sys.workflow.id
+* sys.workflow.state
+* sys.metadata
+* sys.properties
+* sys.version
+* sys.version.publishedBy
+* sys.version.createdBy
+* sys.version.created
+* sys.version.versionNo
+* sys.version.modified
+* sys.version.modifiedBy
+* sys.version.published
 
 It is not possible to specify individual fields within the *properties* and *metadata* fields.
 
-If the *entryTitle* field is included then this field will be returned, for example:
-
-```json
-{
-    "fields": [
-        "sys.uri",
-        "sys.contentTypeId",
-        "entryTitle"
-    ]
-}
-
-If the *entryDescription* field is included then this field will be returned, for example:
-
-```json
-{
-    "fields": [
-        "sys.uri",
-        "sys.contentTypeId",
-        "entryTitle",
-        "entryDescription"
-    ]
-}
-
-```
 
 ## HTTP GET queries
 
