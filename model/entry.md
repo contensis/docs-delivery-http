@@ -28,14 +28,9 @@ These are the standard properties that all entries have. The language property i
 | contentTypeId | string | | The API identifier of the content type that the entry is based on |
 | dataFormat | string | | Either *entry* or *asset* |
 | language | string | [Language code](/localization.md) | The language code of the entry variation |
-| availableLanguages | string[] | [Language code](/localization.md) | A list languages which have available translations. |
 | uri | string | URI | The entry uri |
 | allUris | string[] | URI | All uris associated with the entry |
 | metadata | object | | Metadata associated with the entry instance |
-| workflow | object | | Workflow associated with the entry instance. |
-| workflow.id | string | | The API identifier of the workflow that the entry is using. |
-| workflow.state | string | | The API identifier of the current workflow state of the entry. |
-| isPublished | boolean | | If the entry is currently pubished then the value will be *true*. If the entry has yet to be published or has been unpublished it will be *false*. |
 | version | object | [Version](/model/version.md) | Version info specific to the entry variation |
 
 
@@ -81,25 +76,16 @@ This JSON example shows an entry based on a movie content type.
     ],
     "sys": {
         "id": "71f73a9b-2a13-4d63-bcc1-e8ee5047b01c",
-        "projectId": "movieDb",
         "contentTypeId": "movie",
-        "dataFormat": "entry",
+        "projectId": "movieDb",
         "language": "en-GB",
-        "availableLanguages": [
-            "en-GB",
-            "fr"
-        ],
+        "dataFormat": "entry",
+        "metadata": {},
         "uri" : "/movies/bttf",
         "allUris" : [
             "/movies/bttf"
             "/mjfox/movies/bttf"
-        ],
-        "metadata": {},
-        "workflow": {
-            "id": "contensisEntryBasic",
-            "state": "versionComplete",
-        },
-        "isPublished": true,
+            ],
         "version": {
             "createdBy": "s.derrickson",
             "created": "2016-10-12T09:29:18.5144641+01:00",
