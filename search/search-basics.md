@@ -262,7 +262,7 @@ POST: /api/delivery/projects/{projectId}/entries/search
 
 ## Specifying fields to return
 
-If you have large entries and only require a subset of fields it is worth limiting the fields returned in the results. This will reduce the size of the payload from the API which in turn will improve performance. The fields returned in the results can be specified using a "fields" clause. You can include fields by specifiying the field API ID or you can exclude fields by prefixing the field API ID with a -. Field limiting also applies to linked entries when specifying a linkDepth.
+If you have large entries and only require a subset of fields it is worth limiting the fields returned in the results. This will reduce the size of the payload from the API which in turn will improve performance. The fields returned in the results can be specified using a "fields" clause. You can include fields by specifiying the field API ID.
 
 Example of returning the title and synopsis
 ```json
@@ -270,15 +270,6 @@ Example of returning the title and synopsis
     "fields": [
         "title",
         "synopsis"
-    ]
-}
-```
-Example of returning all fields except for description and actors
-```json
-{
-    "fields": [
-        "-description",
-        "-actors"
     ]
 }
 ```
