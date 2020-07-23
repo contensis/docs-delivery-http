@@ -164,7 +164,7 @@ You can use a value of *false* if you want documents that do not contain a given
 
 
 ### FreeText
-In the example the field *synopsis* is searched upon for any words that match *gotham* or *dark* or *knight*.
+In the example the field *synopsis* is searched upon for any words that match *gotham* and *dark* and *knight*.
 
 ```json
 {
